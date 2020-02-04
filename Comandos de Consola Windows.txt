@@ -1,0 +1,35 @@
+Para limpiar la ruta completa: cd /
+Para cambiar de unidad: cd d/ d:
+Para limpiar pantalla: cls
+Para apagar equipo: shutdown -r(reinicia) -s(apaga) -l(cierra session)
+Para cerrar consola: exit
+Crear carpeta: mkdir nombrecarpeta
+Borrar carpeta: rmdir nombrecarpeta
+Crear archivo: >"Escribe en el archivo"> nombredelarchivo.txt
+Borrar archivo: del nombredelarchivo.txt
+Copiar archivos: copy nombrearchivo.txt nombrearchivocopia.txt
+Copiar a una carpeta: copy nombrearchivo.txt carpetadestino\nombredelarchivocopiado.txt //Utilizando ruta relativa.
+
+Mover un archivo de una carpeta a otra: move nombrearchivo.txt caperadestino\
+Revisar la ip: ipconfig /all
+
+Para hacer busquedas: find "" *buscado*
+
+Crear un listado de resultados de consola en fichero de texto: > nombresalida.txt
+
+Comando: time
+Ver versiones de programas: nombreprograma --version
+
+Ver las tareas ejecutandose: tasklist
+
+Cerrar programas: taskkill /F /IM   (forzando con /F)
+
+
+
+
+
+			
+
+
+
+

@@ -1,0 +1,75 @@
+Paginas de ayuda, manpages: man ifconfig
+		          : whatis
+Para reiniciar: reboot
+***********Clase 1**********
+Comando para apagar: halt
+Comando para cerrar sesion: logout, exit
+Comando para limpiar pantalla: clear
+Comando para saber la fecha: date
+comando para el calendario: cal
+Para historial de comandos ingresados: history
+Eliminar el historial: history -c
+***********Clase 2**********
+Listar el directorio actual: ls -l(lista) -lha(masdatosocultos) -lhr(directorios y todo lo que contienen)
+Para cortar la ejecucion en consola: control + c
+Lista detallada de otra ruta: ls -lh /maslaruta
+			    : ls -lh /home
+Crear una carpeta: mkdir
+Para crear varias carpetas: mkdir prueba/carpeta -p
+Para saber el directorio en el que estoy actualmente: pwd
+Cambiar directamente a home: cd
+Cambiar al directorio anterior: cd ..
+Borrar un archivo: rmdir nombrecarpeta/
+Borrado brusco: rm -rf nombrecarpeta/  (f es para forzado)
+Para crear un fichero: touch prueba.txt
+Para ingresar texto a un fichero: echo "Ingresando texto" > nombrearchivo.txt
+Sacar el contenido del fichero: cat nombrearchivo.txt
+Agregar otra linea al fichero: echo "Linear nueva" >> nombrearchivo.txt
+Mover un archivo de una carpeta a otra: $ mv archivo.txt carpetainterna/archivo.txt
+Copiar un archivo: cp carpeta/* ./ (copia lo que estan en la carpeta en el directorio actual)
+Ver espacio disponible en el equipo y particiones: df -h
+Ver cuando espacio ocupa una carpeta: du -h /nombrecarpeta
+Contenido de los archivos: nano /etc/resolv.conf (editor de codigo)
+
+***********Clase 3- Gestión de usuarios **********
+
+Para saber el tipo de usuario actual: whoami
+Para saber el tipo de usuario actual: id
+
+Ver grupos: cat /etc/group
+
+Crear un nuevo usuario: useradd -g users -d /home/jefrey -s /bin/bash -m -k -D nombreUsuario
+Establecer una contraseña al usuario creado: passwd usuario
+
+Ver todos los usuarios creados: cat /etc/passwd
+Ver la informacion de las contraseñas: cat /etc/shadow
+
+Identificarse como un usuario: su nombreUsuario
+
+***********Clase 4: Permisos **********
+Cambiar los permisos: chmod 777 nombrearchivo.txt (todos los permisos al grupo y al los usuarios)
+Le da permisos solo al creador: chmod 700 nombrearchivo.txt
+Cada digito indica un creador, grupo, resto de usuarios.
+Permisos Van del 0 al 7,
+4 solo lectura,
+2 solo escritura,
+1 permisos de ejecucion,
+0 sin permisos,
+Los numero se suman, asi un 6 es 4 + 2, seria permiso de lectura y escritura.
+Un 7 seria 4 + 2 + 1, lectura, escritura y ejecucion.
+
+Cambiar el dueño de un fichero: chown usuariodestino:grupo nombrearchivo.txt
+A que grupo pertenece un usuario: groups nombreUsuario
+
+
+
+
+
+
+
+
+
+
+
+
+

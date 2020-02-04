@@ -1,0 +1,106 @@
+
+Instalar git
+
+git status
+git log
+
+//Para agregar al commit
+git add nombredelArchivo
+git add . //agrega todos los cambios en los archivos
+//Para remover el comit
+git rm --cached pagina1.html
+
+//Para ver la diferencia entre el archivo y el commit
+git diff "nombreArchivo"
+
+//Registra el commit
+git commit -m "descripcion" //Para despues del comit
+git commit -am "descripcion" //Para hacerlo directo
+
+//Para ver todos lo commits ingresados
+git log --oneline
+git log // Ver todos los datos del commit
+
+//Para git ignore
+touch .gitignore //Crea el archivo
+nano .gitignore
+Y grego el archivo que quiero que se ignore
+
+//Para comparar diferencias entre commits
+git diff e994c3b 041b6fc
+
+//Devolver un archivo comiteado a como estaba anteriormente
+git reset HEAD index.html
+git reset . // resetea todos los archivos
+git checkout Archivo.yyy
+
+//Desacer el ultimo commit hecho
+git reset --hard HEAD~0 //Indicando el indice del comit que se quiere saltar el HEAD
+
+//Borra el commit pero mantener el cambio
+git reset HEAD~1
+
+//Volver a un commit anterior
+git checkout 096e451 //El id del commit al que quiero regresar 
+		     //Se regresa al commit deseado pero los anteriores no se borran
+git checkout a19c758 //Se regresa nada mas colocando el indice deseado
+git checkout master
+
+//Ver las ramas
+git branch
+//Cambiar de rama
+git checkout nombreRama
+
+//Buscar commits
+git log --grep=inici //Busca el comit deacuerdo a palabras en la descripción del commit
+git log -S "contenido" //Para buscar palabras dentro de los archivos del commit
+
+//Manejar Ramas
+**Eliminar una rama
+git branch -D nombreRama
+**Mezclar una rama
+git merge NombreRama
+
+//Stash
+git stash //Guarda en una memoria temporal los cambios que estan en una rama, 
+	  //para poder cambiar a otra y conservar los cambios sin commiter en la rama anterior
+**Ver lo que queda guardado en stash
+git stash show
+**Para sacarlo de la memoria stash
+git stash pop //Recupero lo que habia guardado en el stash de esa rama
+**Limpiar el stash
+git stash clear
+
+// Cherry pick
+**Llevarse el último commit a la rama principal
+git checkout 'master'
+**Desde master uso:
+git cherry-pick id-del-commit
+
+//Resolver conflictos dentro de GIT
+**Cuando se modifica una misma linea en ramas distintas y se hace merge
+**se selecciona la linea deseada en el archivo del conflicto y se guarda asi el comit
+para luego poner
+git commit -m "[MERGE CONFLIC SOLVED]"
+
+//Subir un proyecto a GITHUB
+Se accesa a la cuenta de github
+**Se agrega el origen remoto de GITHUB
+git remote add origin https://github.com/JefreyAE/Testeando-curso.git
+
+**Para bajar todas las ramas en remoto
+git fetch --all
+
+**Para bajar una rama modificada en github
+git pull origin master
+
+**Para subir un cambio a remoto
+**Se commitea el cambio en local primero
+**Y luego:
+git push origin master // Donde master es la rama que se deseea modificar
+
+
+
+
+
+ 
